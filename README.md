@@ -1,4 +1,4 @@
-# Proyecto CRUD de Personas y Empresas 📋 🔨
+# Proyecto De Licitaciones modulos  Personas y Empresas  📋 🔨
 
 ## Descripción del Proyecto
 📝 Este proyecto se centra en el desarrollo de un módulo de gestión de personas y empresas. En este sistema, una empresa puede estar asociada a una persona  que actúan como representantes de la misma. La implementación sigue el patrón de diseño **Modelo Vista Controlador (MVC)** para estructurar el código de manera modular y mantener una separación clara de responsabilidades.
