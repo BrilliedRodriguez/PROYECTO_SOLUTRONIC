@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>CRUD SPRING BOOT</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+	<div class="container mx-auto px-4">
+		<h1 class="text-3xl font-bold underline">
+			Empresas
+		</h1>
+
+		<div class="container mt-4">
+			<div class="mt-4">
+				 
+				<div class="row">
+					<div class="col-3"></div>
+					<div class="col-3"></div>
+					<div class="col-3"></div>
+				</div>
+				<a th:href="@{/newEmpresa}"
+					class="bg-indigo-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue ml-4">
+					agregar
+				</a>
+			</div>
+
+
+
+		</div>
+		<center>
+
+			<table class="items-center w-full bg-transparent border-collapse">
+				<thead>
+					<tr>
+						<th
+							class="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+							#ID</th>
+
+						<th
+							class="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+							name</th>
+
+
+						<th
+							class="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-right">
+							accion</th>
+					</tr>
+				</thead>
+				<tbody class="bg-white divide-y divide-gray-200">
+
+					<tr th:each="d:${deportes}">
+						<td th:text="${d.id}"
+							class="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+							<div class="text-sm text-gray-500">
+
+							</div>
+						</td>
+
+						<td th:text="${d.name}"
+							class="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+
+						</td>
+
+
+						<td
+							class="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+
+
+
+
+							<button th:onclick="eliminar([[${d.id}]])"
+								class="bg-red-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-red">
+								Eliminar
+							</button>
+
+
+
+							<a th:href="@{/editarEmpresa/{id}(id=${d.id})}"
+								class="bg-indigo-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue ml-4">
+								Editar 2
+							</a>
+
+						</td>
+					</tr>
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+			<div />
+
+
+		</center>
+	</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/funciones.js"></script>
+</body>
+
+</html>
